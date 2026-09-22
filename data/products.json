@@ -1,0 +1,192 @@
+[
+  {
+    "id": "amaron-pro-rider-btx5l",
+    "name": "Amaron Pro Rider BTX5L",
+    "category": "Bike Battery",
+    "brand": "Amaron",
+    "voltage": "12V",
+    "capacity": "5Ah",
+    "description": "High crank power VRLA motorcycle battery built with AGM technology, spill-proof design, and low self-discharge.",
+    "featured": true,
+    "image": "/product/1.png"
+  },
+  {
+    "id": "amaron-pro-rider-btx9",
+    "name": "Amaron Pro Rider BTX9",
+    "category": "Bike Battery",
+    "brand": "Amaron",
+    "voltage": "12V",
+    "capacity": "9Ah",
+    "description": "Zero-maintenance two-wheeler battery designed for medium to high-capacity performance bikes with high starting torque.",
+    "featured": false,
+    "image": "/product/2.png"
+  },
+  {
+    "id": "amaron-flo-42b20l",
+    "name": "Amaron Flo 42B20L",
+    "category": "Car Battery",
+    "brand": "Amaron",
+    "voltage": "12V",
+    "capacity": "35Ah",
+    "description": "Zero-maintenance car battery featuring Silven X alloy technology and high heat tolerance for city traffic.",
+    "featured": true,
+    "image": "/product/3.png"
+  },
+  {
+    "id": "amaron-flo-din60",
+    "name": "Amaron Flo DIN60",
+    "category": "Car Battery",
+    "brand": "Amaron",
+    "voltage": "12V",
+    "capacity": "60Ah",
+    "description": "European-standard DIN battery with ASG Duraframe technology engineered for premium hatchbacks and sedans.",
+    "featured": false,
+    "image": "/product/4.png"
+  },
+  {
+    "id": "amaron-go-38b20r",
+    "name": "Amaron Go 38B20R",
+    "category": "Car Battery",
+    "brand": "Amaron",
+    "voltage": "12V",
+    "capacity": "35Ah",
+    "description": "Durable and maintenance-free battery providing reliable cranking power for compact entry-level cars.",
+    "featured": false,
+    "image": "/product/5.png"
+  },
+  {
+    "id": "exide-xplore-12xl5l-b",
+    "name": "Exide Xplore 12XL5L-B",
+    "category": "Bike Battery",
+    "brand": "Exide",
+    "voltage": "12V",
+    "capacity": "5Ah",
+    "description": "Zero-maintenance VRLA motorcycle battery built with gas recombination and leak-proof design.",
+    "featured": true,
+    "image": "/product/6.png"
+  },
+  {
+    "id": "exide-xplore-12xl9-b",
+    "name": "Exide Xplore 12XL9-B",
+    "category": "Bike Battery",
+    "brand": "Exide",
+    "voltage": "12V",
+    "capacity": "9Ah",
+    "description": "High-performance two-wheeler battery engineered with lead-calcium technology for high vibration resistance.",
+    "featured": false,
+    "image": "/product/7.png"
+  },
+  {
+    "id": "exide-mileage-ml38b20l",
+    "name": "Exide Mileage ML38B20L",
+    "category": "Car Battery",
+    "brand": "Exide",
+    "voltage": "12V",
+    "capacity": "35Ah",
+    "description": "Robust vehicular battery with special alloy grid resistance designed specifically for Indian road conditions.",
+    "featured": true,
+    "image": "/product/8.png"
+  },
+  {
+    "id": "exide-matrix-mldin50",
+    "name": "Exide Matrix Red MLDIN50",
+    "category": "Car Battery",
+    "brand": "Exide",
+    "voltage": "12V",
+    "capacity": "50Ah",
+    "description": "Sealed maintenance-free passenger car battery offering extreme heat endurance and long service life.",
+    "featured": false,
+    "image": "/product/9.png"
+  },
+  {
+    "id": "exide-epiq-epiq35l",
+    "name": "Exide Epiq EPIQ35L",
+    "category": "Car Battery",
+    "brand": "Exide",
+    "voltage": "12V",
+    "capacity": "35Ah",
+    "description": "Ultra-premium automotive battery engineered with advanced technology for high electronic load requirement cars.",
+    "featured": false,
+    "image": "/product/10.png"
+  },
+  {
+    "id": "shell-advance-ultra-4t-10w40",
+    "name": "Shell Advance 4T Ultra 10W-40",
+    "category": "Bike Oil",
+    "brand": "Shell",
+    "viscosity": "10W-40",
+    "description": "100% Synthetic 4-stroke motorcycle engine oil powered by Shell PurePlus Technology derived from natural gas.",
+    "featured": true,
+    "image": "/product/11.png"
+  },
+  {
+    "id": "shell-advance-ax7-10w30",
+    "name": "Shell Advance AX7 10W-30",
+    "category": "Bike Oil",
+    "brand": "Shell",
+    "viscosity": "10W-30",
+    "description": "Synthetic technology motorcycle oil featuring Active Cleansing Technology to prevent deposit formation.",
+    "featured": false,
+    "image": "/product/12.png"
+  },
+  {
+    "id": "shell-advance-ax5-4t-20w40",
+    "name": "Shell Advance AX5 4T 20W-40",
+    "category": "Bike Oil",
+    "brand": "Shell",
+    "viscosity": "20W-40",
+    "description": "Premium mineral 4-stroke motorcycle engine oil providing reliable power and engine protection in everyday riding.",
+    "featured": false,
+    "image": "/product/18.png"
+  },
+  {
+    "id": "motul-300v-factory-line-10w40",
+    "name": "Motul 300V Factory Line Road Racing 10W-40",
+    "category": "Bike Oil",
+    "brand": "Motul",
+    "viscosity": "10W-40",
+    "description": "100% Synthetic Ester Core technology racing lubricant engineered for high-performance superbike engines.",
+    "featured": false,
+    "image": "/product/13.png"
+  },
+  {
+    "id": "motul-7100-4t-10w50",
+    "name": "Motul 7100 4T 10W-50",
+    "category": "Bike Oil",
+    "brand": "Motul",
+    "viscosity": "10W-50",
+    "description": "100% Synthetic Ester-based engine oil designed for high-displacement motorcycle engines and hot climates.",
+    "featured": true,
+    "image": "/product/14.webp"
+  },
+  {
+    "id": "motul-5100-4t-15w50",
+    "name": "Motul 5100 4T 15W-50 Technosynthese",
+    "category": "Bike Oil",
+    "brand": "Motul",
+    "viscosity": "15W-50",
+    "description": "Technosynthese Ester-reinforced motorcycle lubricant delivering wear protection and smooth gear shifting.",
+    "featured": false,
+    "image": "/product/15.webp"
+  },
+  {
+    "id": "amaron-hi-way-4t-20w50",
+    "name": "Amaron Hi-Way 4T 20W-50",
+    "category": "Bike Oil",
+    "brand": "Amaron",
+    "viscosity": "20W-50",
+    "description": "Premium 4-stroke bike engine oil formulated with oxidation resistance for high temperature endurance.",
+    "featured": false,
+    "image": "/product/16.png"
+  },
+  {
+    "id": "amaron-ride-4t-10w30",
+    "name": "Amaron Ride 4T 10W-30",
+    "category": "Bike Oil",
+    "brand": "Amaron",
+    "viscosity": "10W-30",
+    "description": "High-grade 4-stroke motorcycle oil offering engine cleanliness, low friction, and reliable cold starting.",
+    "featured": false,
+    "image": "/product/17.png"
+  }
+]
