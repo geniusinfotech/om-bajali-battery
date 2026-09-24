@@ -29,7 +29,7 @@ export function ProductBrowser() {
 
   return (
     <>
-      <div className="filter-bar" aria-label="Product filters">
+      <div className="filter-bar flex flex-col md:flex-row gap-4 items-center mb-4" aria-label="Product filters">
         <div className="filter-label">
           <Filter /> Filter range
         </div>
@@ -57,31 +57,25 @@ export function ProductBrowser() {
         </label>
         <span className="filter-count">{filteredProducts.length} products</span>
       </div>
-      <div className="product-grid product-grid-wide">
+      <div className="product-grid product-grid-wide grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {filteredProducts.map((product, index) => (
           <article className="product-card product-card-3d" key={product.id}>
-            <div
-              className={
-                index % 2 === 0
-                  ? "product-visual visual-yellow"
-                  : "product-visual visual-blue"
-              }
-            >
+            <div>
               <div className="product-stage">
                 <Image
                   src={product.image}
                   alt={product.name}
-                  width={230}
-                  height={230}
-                  className="product-image-3d"
+                  fill
                   style={{
                     width: "100%",
                     height: "100%",
-                    objectFit: "contain",
+                    objectFit: "cover",
                   }}
                 />
               </div>
-              <span className="voltage">{product.voltage}</span>
+              {product.voltage ? (
+                <span className="voltage">{product.voltage}</span>
+              ) : null}
             </div>
             <div className="product-info">
               <span className="product-category">{product.category}</span>

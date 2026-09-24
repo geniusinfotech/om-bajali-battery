@@ -62,7 +62,7 @@ export default function ContactPage() {
         </section>
 
         <section className="section">
-          <div className="container contact-grid">
+          <div className="container contact-grid grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
             <div className="contact-info">
               <span className="kicker">Contact details</span>
               <div className="contact-item">
@@ -137,7 +137,7 @@ export default function ContactPage() {
         </section>
 
         <section className="section section-tight">
-          <div className="container coverage-grid">
+          <div className="container coverage-grid grid grid-cols-1 lg:grid-cols-[1.3fr_0.7fr] gap-6">
             <div className="coverage-panel">
               <span className="kicker">Service coverage</span>
               <h2>Serving drivers across Surat.</h2>

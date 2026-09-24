@@ -66,9 +66,10 @@ export function SiteHeader() {
           <button
             className="menu-button"
             aria-label="Toggle navigation"
+            aria-expanded={open}
             onClick={() => setOpen(!open)}
           >
-            {open ? <X /> : <Menu />}
+            {open ? <X size={20} /> : <Menu size={20} />}
           </button>
           <nav className={open ? "nav open" : "nav"}>
             {nav.map(([label, href]) => (
@@ -82,7 +83,7 @@ export function SiteHeader() {
               </Link>
             ))}
             <Link
-              className="nav-cta flex justify-center items-center"
+              className="nav-cta"
               href="/contact"
               onClick={() => setOpen(false)}
             >
@@ -93,6 +94,13 @@ export function SiteHeader() {
             </Link>
           </nav>
         </div>
+        {open ? (
+          <div
+            className="nav-backdrop"
+            aria-hidden="true"
+            onClick={() => setOpen(false)}
+          />
+        ) : null}
       </header>
     </>
   );
@@ -101,7 +109,7 @@ export function SiteHeader() {
 export function SiteFooter() {
   return (
     <footer className="footer">
-      <div className="container footer-grid">
+      <div className="container footer-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.6fr_0.7fr_1.3fr]">
         <div>
           <Link href="/" className="brand footer-brand">
             <span className="brand-mark">
@@ -170,7 +178,7 @@ export function SiteFooter() {
 export function TrustStrip() {
   return (
     <div className="trust-strip">
-      <div className="container trust-grid">
+      <div className="container trust-grid grid grid-cols-2 sm:grid-cols-4">
         <span>
           <ShieldCheck /> Genuine brands only
         </span>
