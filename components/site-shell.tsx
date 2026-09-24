@@ -31,7 +31,7 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <div className="topbar">
+      {/* <div className="topbar">
         <div className="container topbar-inner">
           <span>
             <Clock3 size={14} /> Mon–Sun · 9:30 AM–7:30 PM
@@ -40,7 +40,7 @@ export function SiteHeader() {
             <Phone size={14} /> +91 80109 04040
           </a>
         </div>
-      </div>
+      </div> */}
       <header className="header">
         <div className="container header-inner">
           <Link href="/" className="brand" onClick={() => setOpen(false)}>
@@ -53,13 +53,13 @@ export function SiteHeader() {
                 style={{
                   width: "100%",
                   height: "100%",
-                  objectFit: "contain",
+                  objectFit: "cover",
                 }}
               />
             </span>
 
             <span className="text-center">
-              <strong>Om Balaji</strong>
+              <strong className="text-red-700">Om Balaji</strong>
               <span className="text-center font-black">Batery</span>
             </span>
           </Link>
@@ -86,6 +86,7 @@ export function SiteHeader() {
               className="nav-cta"
               href="/contact"
               onClick={() => setOpen(false)}
+
             >
               Get a quote{" "}
               <span>
@@ -126,7 +127,7 @@ export function SiteFooter() {
               />
             </span>
             <span className="text-center">
-              <strong>Om Balaji</strong>
+              <strong className="text-red-700">Om Balaji</strong>
               <span className="text-center font-black">Batery</span>
             </span>
           </Link>

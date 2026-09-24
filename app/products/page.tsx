@@ -1,7 +1,11 @@
 import { PageShell } from "@/components/site-shell";
 import ProductBrowser from "@/components/product-browser";
+import products from "@/data/products.json";
 
 export default function ProductsPage() {
+  const brandCount = new Set(products.map((p) => p.brand)).size;
+  const categoryCount = new Set(products.map((p) => p.category)).size;
+
   return (
     <PageShell>
       <main>
@@ -14,8 +18,9 @@ export default function ProductsPage() {
               <em>every journey.</em>
             </h1>
             <p>
-              Choose from genuine Amaron and Exide batteries for bikes and cars.
-              Filter the range by category or brand.
+              Search or filter {products.length} genuine batteries and engine
+              oils from {brandCount} trusted brands across{" "}
+              {categoryCount} categories.
             </p>
           </div>
         </section>

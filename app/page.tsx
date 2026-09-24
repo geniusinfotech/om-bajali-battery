@@ -48,7 +48,7 @@ export default function Home() {
         <HeroCarousel />
 
         {/* Hero section  */}
-        <section className="hero">
+        {/* <section className="hero">
           <div className="container hero-grid grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
             <div className="hero-copy">
               <div className="eyebrow">
@@ -66,7 +66,10 @@ export default function Home() {
                 <Link href="/products" className="button button-primary">
                   Shop batteries <ArrowRight size={18} />
                 </Link>
-                <Link href="/services" className="button button-link btn1 hover:underline">
+                <Link
+                  href="/services"
+                  className="button button-link btn1 hover:underline"
+                >
                   Explore services <span></span>
                 </Link>
               </div>
@@ -89,7 +92,7 @@ export default function Home() {
                 <span className="battery-label">
                   OM BALAJI
                   <br />
-                  <b>BATTERY</b>
+                  <b> BATTERY</b>
                 </span>
               </div>
               <div className="float-card">
@@ -103,7 +106,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <TrustStrip />
 
@@ -171,19 +174,17 @@ export default function Home() {
                     className="product-card product-card-3d"
                     key={product.id}
                   >
-                    <div>
-                      <div className="product-stage">
-                        <Image
-                          src={product.image}
-                          alt={product.name}
-                          fill
-                          style={{
-                            width: "100%",
-                            height: "100%",
-                            objectFit: "cover",
-                          }}
-                        />
-                      </div>
+                    <div className="product-stage">
+                      <Image
+                        src={product.image}
+                        alt={product.name}
+                        fill
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                        }}
+                      />
                       {product.voltage ? (
                         <span className="voltage">{product.voltage}</span>
                       ) : null}
@@ -208,12 +209,12 @@ export default function Home() {
           <div className="container callout-inner">
             <div>
               <span className="kicker">Need a hand?</span>
-              <h2>
+              <h2 className="text-white">
                 Not sure which battery
                 <br />
                 fits your vehicle?
               </h2>
-              <p>
+              <p className="text-white">
                 Tell us your vehicle model. We&apos;ll help you find the right
                 match.
               </p>
@@ -239,7 +240,10 @@ export default function Home() {
                 and Exide batteries for cars and bikes, plus Shell, Motul and
                 Amaron engine oils.
               </p>
-              <Link href="/about" className="text-link">
+              <Link
+                href="/about"
+                className="text-link bg-blue-700 text-white py-4 px-6 rounded-xl my-4"
+              >
                 Learn about our shop <ArrowRight size={16} />
               </Link>
             </div>
@@ -278,7 +282,7 @@ export default function Home() {
                 Sales, near Varachha Police Station, Surat – 395006
               </p>
               <a
-                className="text-link"
+                className="text-link bg-blue-700 text-white py-4 px-6 rounded-xl my-4"
                 href="https://maps.app.goo.gl/ts6McFnzcPg6Mcjc6"
                 target="_blank"
               >
@@ -290,7 +294,8 @@ export default function Home() {
                 <MapPin />
               </div>
               <span>
-                OM BALAJI<span>BATTERY</span>
+                <strong className="text-red-700"> OM BALAJI</strong>
+                <span> BATTERY</span>
               </span>
             </div>
           </div>

@@ -89,7 +89,7 @@ export function HeroCarousel() {
 
   return (
     <section
-      className="relative h-[360px] sm:h-[480px] md:h-[560px] lg:h-[640px] w-full overflow-hidden bg-[#14171C] outline-none"
+      className="relative h-[360px] sm:h-[480px] md:h-[560px] lg:h-[760px] w-full overflow-hidden bg-[#14171C] outline-none"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onKeyDown={handleKeyDown}
