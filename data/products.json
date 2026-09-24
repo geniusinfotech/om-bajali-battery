@@ -157,7 +157,7 @@
     "viscosity": "10W-50",
     "description": "100% Synthetic Ester-based engine oil designed for high-displacement motorcycle engines and hot climates.",
     "featured": true,
-    "image": "/product/14.webp"
+    "image": "/product/14.png"
   },
   {
     "id": "motul-5100-4t-15w50",
@@ -167,7 +167,7 @@
     "viscosity": "15W-50",
     "description": "Technosynthese Ester-reinforced motorcycle lubricant delivering wear protection and smooth gear shifting.",
     "featured": false,
-    "image": "/product/15.webp"
+    "image": "/product/15.png"
   },
   {
     "id": "amaron-hi-way-4t-20w50",

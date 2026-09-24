@@ -31,7 +31,7 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <div className="topbar">
+      {/* <div className="topbar">
         <div className="container topbar-inner">
           <span>
             <Clock3 size={14} /> Mon–Sun · 9:30 AM–7:30 PM
@@ -40,7 +40,7 @@ export function SiteHeader() {
             <Phone size={14} /> +91 80109 04040
           </a>
         </div>
-      </div>
+      </div> */}
       <header className="header">
         <div className="container header-inner">
           <Link href="/" className="brand" onClick={() => setOpen(false)}>
@@ -53,22 +53,23 @@ export function SiteHeader() {
                 style={{
                   width: "100%",
                   height: "100%",
-                  objectFit: "contain",
+                  objectFit: "cover",
                 }}
               />
             </span>
 
             <span className="text-center">
-              <strong>Om Balaji</strong>
+              <strong className="text-red-700">Om Balaji</strong>
               <span className="text-center font-black">Batery</span>
             </span>
           </Link>
           <button
             className="menu-button"
             aria-label="Toggle navigation"
+            aria-expanded={open}
             onClick={() => setOpen(!open)}
           >
-            {open ? <X /> : <Menu />}
+            {open ? <X size={20} /> : <Menu size={20} />}
           </button>
           <nav className={open ? "nav open" : "nav"}>
             {nav.map(([label, href]) => (
@@ -82,9 +83,10 @@ export function SiteHeader() {
               </Link>
             ))}
             <Link
-              className="nav-cta flex justify-center items-center"
+              className="nav-cta"
               href="/contact"
               onClick={() => setOpen(false)}
+
             >
               Get a quote{" "}
               <span>
@@ -93,6 +95,13 @@ export function SiteHeader() {
             </Link>
           </nav>
         </div>
+        {open ? (
+          <div
+            className="nav-backdrop"
+            aria-hidden="true"
+            onClick={() => setOpen(false)}
+          />
+        ) : null}
       </header>
     </>
   );
@@ -101,7 +110,7 @@ export function SiteHeader() {
 export function SiteFooter() {
   return (
     <footer className="footer">
-      <div className="container footer-grid">
+      <div className="container footer-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.6fr_0.7fr_1.3fr]">
         <div>
           <Link href="/" className="brand footer-brand">
             <span className="brand-mark">
@@ -118,7 +127,7 @@ export function SiteFooter() {
               />
             </span>
             <span className="text-center">
-              <strong>Om Balaji</strong>
+              <strong className="text-red-700">Om Balaji</strong>
               <span className="text-center font-black">Batery</span>
             </span>
           </Link>
@@ -170,7 +179,7 @@ export function SiteFooter() {
 export function TrustStrip() {
   return (
     <div className="trust-strip">
-      <div className="container trust-grid">
+      <div className="container trust-grid grid grid-cols-2 sm:grid-cols-4">
         <span>
           <ShieldCheck /> Genuine brands only
         </span>

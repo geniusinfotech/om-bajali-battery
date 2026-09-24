@@ -1,6 +1,19 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
+import { Young_Serif, Bungee_Inline } from 'next/font/google'
 import './globals.css'
+
+const youngSerif = Young_Serif({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-young-serif',
+})
+
+const bungeeInline = Bungee_Inline({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-bungee-inline',
+})
 
 export const metadata: Metadata = {
   title: 'PowerCell Batteries & Auto Care | Surat',
@@ -8,20 +21,11 @@ export const metadata: Metadata = {
   generator: 'v0.app',
   icons: {
     icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.ico',
-        type: 'image/svg+xml',
-      },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon.ico' },
     ],
-    apple: '/apple-icon.png',
+    apple: '/apple-touch-icon.png',
   },
 }
 
@@ -39,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${youngSerif.variable} ${bungeeInline.variable}`}>
       <body className="antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}

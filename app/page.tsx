@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import products from "@/data/products.json";
 import { PageShell, TrustStrip } from "@/components/site-shell";
+import { HeroCarousel } from "@/components/hero-carousel";
 
 const services = [
   [
@@ -43,8 +44,12 @@ export default function Home() {
   return (
     <PageShell>
       <main>
-        <section className="hero">
-          <div className="container hero-grid">
+        {/* Carousel  */}
+        <HeroCarousel />
+
+        {/* Hero section  */}
+        {/* <section className="hero">
+          <div className="container hero-grid grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
             <div className="hero-copy">
               <div className="eyebrow">
                 <span className="eyebrow-dot" /> Surat&apos;s trusted battery
@@ -57,11 +62,14 @@ export default function Home() {
                 Premium batteries, practical advice and dependable auto care for
                 every car and bike in Surat.
               </p>
-              <div className="hero-actions">
+              <div className="hero-actions flex flex-col sm:flex-row gap-4">
                 <Link href="/products" className="button button-primary">
                   Shop batteries <ArrowRight size={18} />
                 </Link>
-                <Link href="/services" className="button button-link btn1">
+                <Link
+                  href="/services"
+                  className="button button-link btn1 hover:underline"
+                >
                   Explore services <span></span>
                 </Link>
               </div>
@@ -84,7 +92,7 @@ export default function Home() {
                 <span className="battery-label">
                   OM BALAJI
                   <br />
-                  <b>BATTERY</b>
+                  <b> BATTERY</b>
                 </span>
               </div>
               <div className="float-card">
@@ -98,8 +106,11 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
+
         <TrustStrip />
+
+        {/* What we do */}
         <section className="section">
           <div className="container">
             <div className="section-heading">
@@ -115,7 +126,7 @@ export default function Home() {
                 View all services <ArrowRight size={16} />
               </Link>
             </div>
-            <div className="service-grid">
+            <div className="service-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {services.map(([title, desc, Icon]) => (
                 <Link
                   href="/services"
@@ -136,6 +147,7 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Featured Producats */}
         <section className="section products-section">
           <div className="container">
             <div className="section-heading">
@@ -149,36 +161,30 @@ export default function Home() {
                 See all products <ArrowRight size={16} />
               </Link>
             </div>
-            <div className="product-grid">
+            <div className="product-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {products
                 .filter((p) => p.featured)
                 .map((product, index) => (
-                  <Link
-                    href="/products"
+                  <a
+                    href={`https://wa.me/918010904040?text=${encodeURIComponent(
+                      `Hi, I'm interested in ${product.name}`,
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="product-card product-card-3d"
                     key={product.id}
                   >
-                    <div
-                      className={
-                        index % 2 === 0
-                          ? "product-visual visual-yellow"
-                          : "product-visual visual-blue"
-                      }
-                    >
-                      <div className="product-stage">
-                        <Image
-                          src={product.image}
-                          alt={product.name}
-                          width={230}
-                          height={230}
-                          className="product-image-3d"
-                          style={{
-                            width: "100%",
-                            height: "100%",
-                            objectFit: "contain",
-                          }}
-                        />
-                      </div>
+                    <div className="product-stage">
+                      <Image
+                        src={product.image}
+                        alt={product.name}
+                        fill
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                        }}
+                      />
                       {product.voltage ? (
                         <span className="voltage">{product.voltage}</span>
                       ) : null}
@@ -193,7 +199,7 @@ export default function Home() {
                         View details <ArrowRight size={15} />
                       </span>
                     </div>
-                  </Link>
+                  </a>
                 ))}
             </div>
           </div>
@@ -203,12 +209,12 @@ export default function Home() {
           <div className="container callout-inner">
             <div>
               <span className="kicker">Need a hand?</span>
-              <h2>
+              <h2 className="text-white">
                 Not sure which battery
                 <br />
                 fits your vehicle?
               </h2>
-              <p>
+              <p className="text-white">
                 Tell us your vehicle model. We&apos;ll help you find the right
                 match.
               </p>
@@ -220,7 +226,7 @@ export default function Home() {
         </section>
 
         <section className="company-home">
-          <div className="container company-home-grid">
+          <div className="container company-home-grid grid grid-cols-1 lg:grid-cols-2">
             <div>
               <span className="kicker">Why Om Balaji Battery</span>
               <h2>
@@ -234,7 +240,10 @@ export default function Home() {
                 and Exide batteries for cars and bikes, plus Shell, Motul and
                 Amaron engine oils.
               </p>
-              <Link href="/about" className="text-link">
+              <Link
+                href="/about"
+                className="text-link bg-blue-700 text-white py-4 px-6 rounded-xl my-4"
+              >
                 Learn about our shop <ArrowRight size={16} />
               </Link>
             </div>
@@ -260,7 +269,7 @@ export default function Home() {
 
         {/* Location */}
         <section className="location">
-          <div className="container location-grid">
+          <div className="container location-grid grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
             <div>
               <span className="kicker">Find us in Surat</span>
               <h2>
@@ -273,7 +282,7 @@ export default function Home() {
                 Sales, near Varachha Police Station, Surat – 395006
               </p>
               <a
-                className="text-link"
+                className="text-link bg-blue-700 text-white py-4 px-6 rounded-xl my-4"
                 href="https://maps.app.goo.gl/ts6McFnzcPg6Mcjc6"
                 target="_blank"
               >
@@ -285,7 +294,8 @@ export default function Home() {
                 <MapPin />
               </div>
               <span>
-                OM BALAJI<span>BATTERY</span>
+                <strong className="text-red-700"> OM BALAJI</strong>
+                <span> BATTERY</span>
               </span>
             </div>
           </div>
