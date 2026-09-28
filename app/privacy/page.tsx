@@ -28,9 +28,7 @@ export default function Privacy() {
           <div className="container">
             <span className="kicker">Your privacy</span>
             <h1>
-              Privacy
-              <br />
-              <em>policy.</em>
+              Privacy <em> policy.</em>
             </h1>
             <p>
               PowerCell Batteries &amp; Auto Care respects your privacy. This

@@ -86,9 +86,8 @@ export function SiteHeader() {
               className="nav-cta"
               href="/contact"
               onClick={() => setOpen(false)}
-
             >
-              Get a quote{" "}
+              Get a quote
               <span>
                 <MoveUpRight size={14} />
               </span>
@@ -141,6 +140,7 @@ export function SiteFooter() {
           <Link href="/products">Our products</Link>
           <Link href="/services">Services</Link>
           <Link href="/faq">FAQs</Link>
+          <Link href="/terms-conditions">Terms and Conditions</Link>
         </div>
         <div>
           <h4>Visit us</h4>
